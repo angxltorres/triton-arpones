@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tritón Arpones | Catálogo</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #07131b;
+            color: white;
+        }
+
+        /* MENU */
+
+        nav {
+            background: #050d13;
+            padding: 18px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav h2 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #00c6d7;
+        }
+
+        /* INICIO */
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(
+                rgba(0,0,0,.5),
+                rgba(0,0,0,.7)
+            );
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #cfd8dc;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 25px;
+            background: #00bcd4;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            background: #0097a7;
+        }
+
+        /* SECCIONES */
+
+        section {
+            padding: 70px 30px;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        /* BUSCADOR */
+
+        .buscador {
+            max-width: 600px;
+            margin: auto auto 40px;
+        }
+
+        .buscador input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+        }
+
+        /* PRODUCTOS */
+
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .producto {
+            background: #102530;
+            border-radius: 15px;
+            overflow: hidden;
+            padding-bottom: 25px;
+            text-align: center;
+            transition: transform .2s;
+        }
+
+        .producto:hover {
+            transform: translateY(-5px);
+        }
+
+        .producto .foto {
+            height: 220px;
+            background: #1b3947;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b0bec5;
+            font-size: 18px;
+        }
+
+        .producto h3 {
+            font-size: 23px;
+            margin: 20px 10px 10px;
+        }
+
+        .producto p {
+            color: #cfd8dc;
+            padding: 0 15px;
+        }
+
+        .precio {
+            color: #00c6d7 !important;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* ENVIOS */
+
+        .envios {
+            background: #0d202b;
+            text-align: center;
+        }
+
+        .envios p {
+            font-size: 19px;
+            margin: 15px;
+        }
+
+        /* CONTACTO */
+
+        .contacto {
+            text-align: center;
+        }
+
+        .contacto p {
+            font-size: 18px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #050d13;
+            text-align: center;
+            padding: 30px;
+            color: #b0bec5;
+        }
+
+        /* CELULAR */
+
+       @media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav h2 {
+        font-size: 24px;
+    }
+
+    nav div {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        line-height: 1.1;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 50px 15px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .producto {
+        width: 100%;
+    }
+
+    .producto .foto {
+        height: 250px;
+    }
+
+    .producto .foto img {
+        height: 250px;
+    }
+
+    .boton {
+        width: 90%;
+        padding: 15px 10px;
+    }
+
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+
+    <nav>
+
+        <h2>TRITÓN 🌊</h2>
+
+        <div>
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#envios">Envíos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+
+    </nav>
+
+
+    <!-- INICIO -->
+
+    <section class="hero" id="inicio">
+
+        <h1>TRITÓN ARPONES</h1>
+
+        <p>
+            Equipamiento para pesca submarina
+        </p>
+
+        <p>
+            📦 Envíos nacionales e internacionales 🌎
+        </p>
+
+        <a href="#catalogo" class="boton">
+            VER CATÁLOGO
+        </a>
+
+    </section>
+
+
+    <!-- CATALOGO -->
+
+    <section id="catalogo">
+
+        <h2>NUESTRO CATÁLOGO</h2>
+
+        <div class="buscador">
+
+            <input
+                type="text"
+                id="buscar"
+                placeholder="🔎 Buscar un producto..."
+            >
+
+        </div>
+
+
+        <div class="productos">
+
+
+            <!-- PRODUCTO 1 -->
+
+            <div class="producto">
+
+              <div class="foto">
+    <img src="imagenes/arpon-40.jpg.png" alt="Arpón de 40 cm">
+</div>
+
+                <h3>Arpón 40 cm</h3>
+
+                <p>
+                    Arpón semiprofesional para pesca submarina.
+                </p>
+
+                <p>
+                    📏 Longitud: 40 cm
+                </p>
+
+                <p class="precio">
+                    $185.000 COP
+                </p>
+
+                <a
+                    class="boton"
+                    href="https://wa.me/573209865724?text=Hola%2C%20estoy%20interesado%20en%20el%20Arp%C3%B3n%20de%2040%20cm"
+                    target="_blank">
+
+                    CONSULTAR POR WHATSAPP
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCTO 2 -->
+
+            <div class="producto">
+
+               <div class="foto">
+    <img src="imagenes/arpon-50.jpg.jpeg" alt="Arpón de 50 cm">
+</div>
+
+                <h3>Arpón 50 cm</h3>
+
+                <p>
+                    Arpón semiprofesional para pesca submarina.
+                </p>
+
+                <p>
+                    📏 Longitud: 50 cm
+                </p>
+
+                <p class="precio">
+                    $185.000 COP
+                </p>
+
+                <a
+                    class="boton"
+                    href="https://wa.me/573209865724?text=Hola%2C%20estoy%20interesado%20en%20el%20Arp%C3%B3n%20de%2050%20cm"
+                    target="_blank">
+
+                    CONSULTAR POR WHATSAPP
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCTO 3 -->
+
+            <div class="producto">
+
+                <div class="foto">
+                    FOTO DEL PRODUCTO
+                </div>
+
+                <h3>Marcación láser</h3>
+
+                <p>
+                    Personalización del producto.
+                </p>
+
+                <p class="precio">
+                    $10.000 COP
+                </p>
+
+                <a
+                    class="boton"
+                    href="https://wa.me/573209865724?text=Hola%2C%20estoy%20interesado%20en%20la%20marcaci%C3%B3n%20l%C3%A1ser"
+                    target="_blank">
+
+                    CONSULTAR POR WHATSAPP
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ENVIOS -->
+
+    <section class="envios" id="envios">
+
+        <h2>ENVÍOS</h2>
+
+        <p>📦 Envíos a toda Colombia</p>
+
+        <p>🌎 Envíos internacionales</p>
+
+        <p>💬 Consulta disponibilidad y costos por WhatsApp</p>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+
+    <section class="contacto" id="contacto">
+
+        <h2>CONTÁCTANOS</h2>
+
+        <p>📱 WhatsApp: 320 986 5724</p>
+
+        <p>📍 Colombia</p>
+
+        <a
+            class="boton"
+            href="https://wa.me/573209865724"
+            target="_blank">
+
+            HABLAR POR WHATSAPP
+
+        </a>
+
+    </section>
+
+
+    <!-- PIE DE PAGINA -->
+
+    <footer>
+
+        <h3>TRITÓN ARPONES</h3>
+
+        <p>
+            Pesca submarina | Envíos nacionales e internacionales
+        </p>
+
+        <p>
+            © 2026 Tritón Arpones
+        </p>
+
+    </footer>
+
+
+    <!-- BUSCADOR -->
+
+    <script>
+
+        const buscador = document.getElementById("buscar");
+
+        const productos = document.querySelectorAll(".producto");
+
+        buscador.addEventListener("input", function() {
+
+            const texto = buscador.value.toLowerCase();
+
+            productos.forEach(function(producto) {
+
+                const contenido =
+                    producto.textContent.toLowerCase();
+
+                if (contenido.includes(texto)) {
+
+                    producto.style.display = "";
+
+                } else {
+
+                    producto.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+
+</body>
+</html>
